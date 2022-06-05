@@ -8,8 +8,9 @@ For the documentation, please visit: https://www.kaylaman.com/double-exposure-pl
 After cloning this repo, go to **init.py** to change your path to where you saved the clone repo. And execute the **init.py** script in the Nuke's script editor.
 
 # Installation through Environment Variable
+1. Do the same thing as you seen in Temporarily Installation.
+2. Edit your user variable through environment variables, add Nuke_Path to the path where you cloned/saved this repo.
 
-Edit your user variable through environment variables, add Nuke_Path to the path where you cloned/saved this repo.  
 
 ![alt text](https://github.com/moonyuet/Double_Exposure_Nuke/blob/main/examples/env/Screenshot%202022-06-05%20132408.png)
 
