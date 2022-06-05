@@ -1,0 +1,99 @@
+#! C:/Program Files/Nuke13.2v1/nuke-13.2.1.dll -nx
+#write_info DE_Write file:"C:/Users/Kayla/Downloads/DE_2.png" format:"2048 1556 1" chans:":rgba.red:rgba.green:rgba.blue:" framerange:"1 100" fps:"0" colorspace:"default (sRGB)" datatype:"8 bit" transfer:"unknown" views:"main" colorManagement:"Nuke"
+version 13.2 v1
+Gizmo {
+ inputs 2
+ label "Simple Double Exposure "
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 182
+  ypos 4
+ }
+ Reformat {
+  name MAIN_REFORMAT
+  xpos 182
+  ypos 44
+ }
+set Nca439000 [stack 0]
+ Blur {
+  size 1.2
+  name MAIN_COMP_BLUR
+  xpos 402
+  ypos 68
+ }
+ Keyer {
+  invert true
+  operation "luminance key"
+  range {0.3 0.55 1 1}
+  name MAIN_COMP_KEY
+  xpos 402
+  ypos 104
+ }
+ Input {
+  inputs 0
+  name Input2
+  xpos 292
+  ypos 4
+  number 1
+ }
+ Reformat {
+  name OVERLAY_REFORMAT
+  xpos 292
+  ypos 44
+ }
+ Keyer {
+  operation "luminance key"
+  range {0.02 0.05 1 1}
+  name OVERLAY_COMP_KEY
+  xpos 292
+  ypos 68
+ }
+ EdgeBlur {
+  size 20
+  name FG_EdgeBlur
+  xpos 292
+  ypos 104
+ }
+ Transform {
+  translate {90 -10}
+  center {1024 778}
+  name FG_Transform
+  xpos 292
+  ypos 146
+ }
+push $Nca439000
+ ColorCorrect {
+  saturation 0.4
+  contrast 0.9
+  gain 1.5
+  shadows.gamma 1.5
+  midtones.contrast 1.5
+  midtones.gain 1.2
+  highlights.gain 1.12
+  name MAIN_COLOR_CORRECTION
+  xpos 182
+  ypos 146
+ }
+ Merge {
+  inputs 2+1
+  name DE_Merge
+  xpos 402
+  ypos 146
+ }
+ Write {
+  file C:/Users/Kayla/Downloads/DE_2.png
+  file_type png
+  checkHashOnRead false
+  version 2
+  name DE_Write
+  xpos 402
+  ypos 170
+ }
+ Output {
+  name Output1
+  xpos 402
+  ypos 270
+ }
+end_group
