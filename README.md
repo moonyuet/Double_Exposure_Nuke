@@ -2,9 +2,6 @@ This tool is designed for the artist who needs to finish multiple double exposur
 
 Double Exposures are commonly seen in Poster Design and Opening Credits for True Detective franchise.
 
-<<<<<<< HEAD
-For more information, please visit: https://www.kaylaman.com/double-exposure-plugin-in-nuke.html
-=======
 For the documentation, please visit: https://www.kaylaman.com/double-exposure-plugin-in-nuke.html
 
 # Temporarily Installation 
