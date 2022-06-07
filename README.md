@@ -17,4 +17,4 @@ After cloning this repo, go to **init.py** to change your path to where you save
 Enjoy the Plugin!
 
 ![alt text](https://github.com/moonyuet/Double_Exposure_Nuke/blob/aefe1736bf4c4de6d6c39672619af26b4e155d9c/examples/DE_1.png)
->>>>>>> dfab968aff3016cb8e8a84753350db37ab7dded3
+
